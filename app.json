@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "react-native-skia-chart-sample",
+    "slug": "react-native-skia-chart-sample",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
