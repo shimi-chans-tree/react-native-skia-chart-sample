@@ -6,10 +6,11 @@ import {
   runTiming,
 } from "@shopify/react-native-skia";
 import React from "react";
-import { View, SafeAreaView, Button, Easing } from "react-native";
+import { SafeAreaView, Button, Easing } from "react-native";
 import { GestureHandler } from "./GestureHandler";
 import { ChartSticker, ChartStickerDimensions } from "./ChartSticker";
 import { Roboto_400Regular } from "@expo-google-fonts/roboto";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 const CanvasHeight = 500;
 const CanvasWidth = 1000;
@@ -35,7 +36,7 @@ export const Stickers = () => {
 
   return (
     <SafeAreaView>
-      <View>
+      <GestureHandlerRootView>
         <Canvas
           style={{
             width: CanvasWidth,
@@ -53,7 +54,7 @@ export const Stickers = () => {
           matrix={chartMatrix}
           dimensions={ChartStickerDimensions}
         />
-      </View>
+      </GestureHandlerRootView>
       <Button title="Animate!" onPress={animate} />
     </SafeAreaView>
   );
